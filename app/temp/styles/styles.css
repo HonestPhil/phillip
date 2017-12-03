@@ -469,6 +469,12 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
+  margin-top: 40px;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .animateme {
@@ -757,4 +763,20 @@ section {
     -webkit-transform: rotate(-45deg) translate(0, 0);
             transform: rotate(-45deg) translate(0, 0);
   }
+}
+
+.myCarousel {
+  position: relative;
+  width: 80%;
+  height: 75%;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+.slide01 {
+
+  background: '../images/image1.png';
+  background-size: contain;
+
 }
