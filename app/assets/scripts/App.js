@@ -1,6 +1,7 @@
 import Intro from './modules/Typewriter';
 import $ from 'jquery';
 
+
 var heroArea = $('.large-hero__text-content');
 var introTypewriter = new Intro(heroArea,
   [
@@ -8,3 +9,5 @@ var introTypewriter = new Intro(heroArea,
     '<h2>I am a web developer. </h2>',
     '<h2>Here is some of my work...</h2>'
   ],true);
+
+// var scrollButton = new ScrollButton(true);

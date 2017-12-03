@@ -10335,6 +10335,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
 var heroArea = __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.large-hero__text-content');
 var introTypewriter = new __WEBPACK_IMPORTED_MODULE_0__modules_Typewriter__["a" /* default */](heroArea,
   [
@@ -10342,6 +10343,8 @@ var introTypewriter = new __WEBPACK_IMPORTED_MODULE_0__modules_Typewriter__["a" 
     '<h2>I am a web developer. </h2>',
     '<h2>Here is some of my work...</h2>'
   ],true);
+
+// var scrollButton = new ScrollButton(true);
 
 
 /***/ }),
@@ -10353,6 +10356,8 @@ var introTypewriter = new __WEBPACK_IMPORTED_MODULE_0__modules_Typewriter__["a" 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_typeit__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_typeit___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_typeit__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ScrollButton__ = __webpack_require__(4);
+
 
 
 
@@ -10368,7 +10373,10 @@ class Intro {
       lifeLike:true,
       autoStart: this.startTyping,
       nextStringDelay: 750,
-      cursor: false
+      cursor: false,
+      callback: function() {
+                  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.scroll-button').fadeIn('slow');
+                 }
     });
   }
 }
@@ -11090,6 +11098,27 @@ exports.default = Instance;
 /***/ })
 /******/ ]);
 });
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+
+class ScrollButton {
+  constructor (e) {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#hero-area').on('click', function(e) {
+      e.preventDefault();
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('html, body').animate({ scrollTop: __WEBPACK_IMPORTED_MODULE_0_jquery___default()(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).attr('#hero-area')).offset().top}, 500, 'linear');
+    });
+  }
+}
+
+/* unused harmony default export */ var _unused_webpack_default_export = (ScrollButton);
+
 
 /***/ })
 /******/ ]);
