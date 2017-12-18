@@ -1,0 +1,17 @@
+.myCarousel {
+  position: relative;
+  width: 80%;
+  height: 75%;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+.slide01 {
+  position: relative;
+  background: '../images/image1.png';
+}
+
+img {
+  background-size: 200px 200px;
+}
