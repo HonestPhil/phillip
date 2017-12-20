@@ -2,12 +2,46 @@
 <html>
 <head>
 	<title>Phillip Currence</title>
-	
+	<link rel="stylesheet" type="text/css" href="/temp/styles/styles.css">
 	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
-	<link rel="stylesheet" type="text/css" href="/temp/styles/styles.css">
+	 
+	<style type="text/css">
+		.slider {
+        width: 50%;
+        /*top: 50%;*/
+        margin: 100px auto;
+        height: 50%;
+        
+    }
+    .slick-slide {
+      margin: 0px 20px;
+    }
+    .slick-slide img {
+      width: 100%;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+      color: white;
+      font-size: 4rem;
+      font-weight: 800;
+     
+    }
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+    .slick-current {
+      opacity: 1;
+    }
+	</style>
+	
 </head>
 <body>
 	<div class="animateme">
@@ -46,23 +80,6 @@
 					<span></span>See My Work?
 				</a>
 			</div>
-		</section>
-
-		<section id="showcase" class="general-content-container">
-			<h1>My Portfolio</h1>
-			<div class="myCarousel" data-slick='{"slidesToShow": 1, "slidesToScroll": 3}'>
-				<div class="slide01">
-					<img src="./assets/images/image1.png">
-				</div>
-				<div class="slide02">
-					<img src="./assets/images/image2.png">
-				</div>
-				<div class="slide03">
-					<img src="./assets/images/image3.png">
-				</div>
-				<button type="button" class="slick-next">Next</button>
-				<button type="button" class="slick-prev">Previous</button>
-
 			</div>
 			<!--<div class="scroll-button scroll-button--not-visable">-->
 			<!--	<a href="#showcase">-->
@@ -156,16 +173,17 @@
         Here's a little about me...
       </h2>
     <!--</div>-->
-    <div class="general-content-container reveal-content">
+    <div class="general-content-container">
       <div class="row u-margin-top-small">
           <div class="col-1-of-2">
             <h3 class="tertiary-heading">
               My Story
             </h3>
               <p class="paragraph">
-                 My name is Phillip Currence. I have been involved in web development for over 10 years. I am a consultant that can assist you and your team with web design, website development, search engine optimization.
+                 My name is Phillip Currence. I have been involved in web development for over 10 years. I am a developer that can assist you and your team with website concept, website design, and website development.
+
                <p class="paragraph">
-                 When you are bulding a web presence it is important to consider content and design factors that will push conversions and increase your bottom line. You should hire a web designer that understands how to bring your vision to life in the most functional and effective way possible. 
+                 When you are bulding a web presence it is important to incorporate design factors that will push conversions and increase your bottom line. You should hire a web designer that understands how to bring your vision to life in the most functional and effective way possible. 
                </p>
               </p>
           </div>
@@ -189,16 +207,8 @@
               
           </div>
       </div>
-      
-      <div id="toTop">
-        <div class="scroll-button ">
-				<a href="#hero-area">
-					<span></span>Back to Top
-				</a>
-			</div>
-		
-		</div>
-    </div>
+  
+    
   </section>
   
   <footer class="footer">
@@ -213,6 +223,13 @@
                         </ul>
                     </div>
                 </div>
+                <div id="toTop">
+                  <div class="scroll-button ">
+                  <a href="#hero-area">
+                    <span></span>Back to Top
+                  </a>
+                </div>		
+              </div>
                 <div class="col-1-of-2">
                     <p class="footer__copyright">
                         Built by <a href="#" class="footer__link">Phillip Currence</a>
@@ -222,10 +239,24 @@
                 </div>
             </div>
         </footer>
+      </div>
   
   
 
 
-<script type="text/javascript" src="./temp/scripts/App.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./temp/scripts/App.js" type="text/javascript"></script>
+  <script src="./assets/scripts/modules/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+    });
+    
+    
+</script>
 </body>
 </html>
