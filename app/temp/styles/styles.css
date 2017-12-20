@@ -675,15 +675,11 @@ img {
 
 .slick-track {
   position: relative;
-<<<<<<< HEAD
-  /* background: '../images/image1.png'; */
-=======
   top: 0;
   left: 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
->>>>>>> bfb6010e24c895034a34b62e386e8c536bac2fb1
 }
 
 .slick-track:before,
