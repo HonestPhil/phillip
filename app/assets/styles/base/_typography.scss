@@ -1,0 +1,36 @@
+.section-title {
+    position: relative;
+    color: white;
+    padding-left: 2rem;
+    padding-top: 3rem;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    color: white;
+    letter-spacing: .2rem;
+    padding-left: 2rem;
+    font-size: 1rem;
+    
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
+
+.tertiary-heading {
+    color: white;
+    letter-spacing: .2rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.intro--main {
+    padding: 2rem;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+}
+
+.intro--sub {
+    letter-spacing: .1rem;
+    padding-bottom: .6rem;
+}
