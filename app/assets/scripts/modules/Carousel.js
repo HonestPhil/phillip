@@ -3,36 +3,32 @@ import Carousel from 'slick-carousel';
 
 class MyCarousel {
   constructor () {
-    $(".myCarousel").slick({
-
-// normal options...
-infinite: false,
-
-// the magic
-responsive: [{
-
-    breakpoint: 1024,
-    settings: {
-      slidesToShow: 3,
-      infinite: true
-    }
-
-  }, {
-
-    breakpoint: 600,
-    settings: {
-      slidesToShow: 2,
-      dots: true
-    }
-
-  }, {
-
-    breakpoint: 300,
-    settings: "unslick" // destroys slick
-
-  }]
-});
-    }
+    this.carousel = $(".myCarousel");
+    this.createCarousel();
   }
+  
+  createCarousel () {
+      this.carousel.slick({
+    autoplay:true,
+    autoplaySpeed:5000,
+    arrows: true,
+    speed:900,
+    slidesToShow:1,
+    slidesToScroll:1,
+    pauseOnHover:true,
+    dots:true,
+    pauseOnDotsHover:true,
+    cssEase:'linear',
+    fade:true,
+    focusOnSelect: true,
+    focusOnChange: true,
+    draggable:false,
+    // prevArrow:'<button id="nextBtn" type="button" class="slick-next slideshow__button slideshow__button--next">Next</button>',
+    // nextArrow:'<button class="NextArrow"></button>', 
+  });
+  }
+  
+  
+}
 
 export default MyCarousel;

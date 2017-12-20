@@ -1,0 +1,10 @@
+.section__about-me {
+    & ul {
+        list-style: circle;
+        padding-left: 2rem;
+        line-height: 1.4rem;
+        font-size:    1rem;
+        letter-spacing: .3rem;
+        color: white;
+    }
+}

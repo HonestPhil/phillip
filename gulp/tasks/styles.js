@@ -1,17 +1,21 @@
 var gulp = require('gulp'),
-	postcss = require('gulp-postcss'),
-	autoprefixer = require('autoprefixer'),
-	cssvars = require('postcss-simple-vars'),
-	nested = require('postcss-nested'),
-	cssImport = require('postcss-import'),
-	mixins = require('postcss-mixins');
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    watch = require('gulp-watch'),
 
-gulp.task('styles', function(){
-	return gulp.src('./app/assets/styles/styles.css')
-		.pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
-		.on('error', function(err){
-			console.log(err.toString());
-			this.emit('end');
-		})
-		.pipe(gulp.dest('./app/temp/styles'));
+	input = './app/assets/styles/**/*.scss',
+    output = './app/temp/styles',
+    
+    sassOptions = {
+        errLogConsole: true,
+        outputStyle: 'expanded'
+    };
+
+
+gulp.task('sass', function(){
+    return gulp
+    .src(input)
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(output));
 });
