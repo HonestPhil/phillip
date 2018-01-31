@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
 
-	input = './app/assets/styles/**/*.scss',
+	input = './app/assets/sass/**/*.scss',
     output = './app/temp/styles',
     
     sassOptions = {

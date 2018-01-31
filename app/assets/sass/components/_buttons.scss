@@ -1,0 +1,99 @@
+.scroll-button a {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.scroll-button a:hover {
+  opacity: .5;
+}
+
+.scroll-button--not-visable {
+  display: none;
+  transition: display .3s;
+}
+
+//Header to Showcase
+#hero-area a {
+  position: absolute;
+  padding-top: 60px;
+  padding-bottom: 25px;
+}
+#hero-area a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+
+//Showcase to About Me
+#scrollBtn a {
+  padding-top: 60px;
+  position: relative;
+}
+#scrollBtn a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+.scroll-button__about-me {
+  padding-top: 5rem;
+  margin: 5rem;
+}
+
+//Footer to Header
+#toTop {
+  position: relative;
+  display: inline-block;
+  width: 20rem;
+  z-index: 20;
+  
+  //@include clearfix;
+}
+
+#toTop a {
+  padding-top: 60px;
+}
+#toTop a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  -webkit-animation: sdb05 2s infinite;
+  animation: sdb05 2s infinite;
+  box-sizing: border-box;
+}

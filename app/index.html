@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Phillip Currence</title>
-	<link rel="stylesheet" type="text/css" href="/temp/styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="./temp/styles/main.css">
 	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<!-- Add the slick-theme.css if you want default styling -->
@@ -11,7 +11,7 @@
 	<style type="text/css">
 		.slider {
         width: 50%;
-        /*top: 50%;*/
+        top: -5%;
         margin: 100px auto;
         height: 50%;
         
@@ -40,6 +40,11 @@
     .slick-current {
       opacity: 1;
     }
+    .slick-prev
+    {
+    left: -25px;
+    }
+    
 	</style>
 	
 </head>
@@ -87,6 +92,7 @@
 			<!--	</a>-->
 			<!--</div>-->
 		</section>
+  
   <h2 id="showcase" class="section-title">
     This is my Portfolio...
   </h2>
@@ -159,7 +165,7 @@
   </section>
   <div id="scrollBtn">
 
-      <div class="scroll-button">
+      <div class="scroll-button scroll-button__about-me">
 				<a href="#about-me">
 					<span></span>About Me
 				</a>
@@ -188,8 +194,8 @@
               </p>
           </div>
           <div class="col-1-of-2">
-              
-                <h3 class="tertiary-heading">
+            <div class="my-skills">
+               <h3 class="tertiary-heading">
                   My Skills
                 </h3>
                 <ul class="about-me__skills">
@@ -203,42 +209,71 @@
                   <li>WORDPRESS</li>
                   <li>JOOMLA</li>
                   <li>RESTful Routing</li>
-                </ul>
-              
+                </ul>  
+            </div>
           </div>
       </div>
-  
+      
+      <div class="footer">
+        <div class="row">
+          <div class="col-1-of-3">
+              <div class="footer__navigation">
+                  <ul class="footer__list">
+                      <li class="footer__item"><a href="#hero-area" class="footer__link">Home</a></li>
+                      <li class="footer__item"><a href="#showcase" class="footer__link">Portfolio</a></li>
+                      <li class="footer__item"><a href="#about-me" class="footer__link">About Me</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div id="toTop" class="col-1-of-3">
+              <div class="scroll-button  ">
+              <a href="#hero-area">
+                <span></span>Back to Top
+              </a>
+            </div>		
+          </div>
+          <div class="col-1-of-3">
+              <p class="footer__copyright">
+                <p class="footer__copyright--text">
+                    Built by <a href="#" class="footer__link">Phillip Currence</a>
+                  <br>
+                  Designed by Phillip Currence  
+                </p>
+              </p>
+          </div>
+        </div>
+      </div>
     
   </section>
   
-  <footer class="footer">
+  <!--<footer class="footer">-->
             
-            <div class="row">
-                <div class="col-1-of-2">
-                    <div class="footer__navigation">
-                        <ul class="footer__list">
-                            <li class="footer__item"><a href="#hero-area" class="footer__link">Home</a></li>
-                            <li class="footer__item"><a href="#portfolio" class="footer__link">Portfolio</a></li>
-                            <li class="footer__item"><a href="#about-me" class="footer__link">About Me</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="toTop">
-                  <div class="scroll-button ">
-                  <a href="#hero-area">
-                    <span></span>Back to Top
-                  </a>
-                </div>		
-              </div>
-                <div class="col-1-of-2">
-                    <p class="footer__copyright">
-                        Built by <a href="#" class="footer__link">Phillip Currence</a>
-                        <br>
-                        Designed by Phillip Currence
-                    </p>
-                </div>
-            </div>
-        </footer>
+  <!--          <div class="row">-->
+  <!--              <div class="col-1-of-2">-->
+  <!--                  <div class="footer__navigation">-->
+  <!--                      <ul class="footer__list">-->
+  <!--                          <li class="footer__item"><a href="#hero-area" class="footer__link">Home</a></li>-->
+  <!--                          <li class="footer__item"><a href="#showcase" class="footer__link">Portfolio</a></li>-->
+  <!--                          <li class="footer__item"><a href="#about-me" class="footer__link">About Me</a></li>-->
+  <!--                      </ul>-->
+  <!--                  </div>-->
+  <!--              </div>-->
+  <!--              <div id="toTop">-->
+  <!--                <div class="scroll-button ">-->
+  <!--                <a href="#hero-area">-->
+  <!--                  <span></span>Back to Top-->
+  <!--                </a>-->
+  <!--              </div>		-->
+  <!--            </div>-->
+  <!--              <div class="col-1-of-2">-->
+  <!--                  <p class="footer__copyright">-->
+  <!--                      Built by <a href="#" class="footer__link">Phillip Currence</a>-->
+  <!--                      <br>-->
+  <!--                      Designed by Phillip Currence-->
+  <!--                  </p>-->
+  <!--              </div>-->
+  <!--          </div>-->
+  <!--      </footer>-->
       </div>
   
   

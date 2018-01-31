@@ -3,7 +3,7 @@
     color: white;
     padding-left: 2rem;
     padding-top: 3rem;
-    font-size: 3rem;
+    font-size: 2.3rem;
 }
 
 .paragraph {
@@ -11,7 +11,7 @@
     color: white;
     letter-spacing: .2rem;
     padding-left: 2rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     
     &:not(:last-child){
         margin-bottom: 3rem;
@@ -22,16 +22,28 @@
     color: white;
     letter-spacing: .2rem;
     padding-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 .intro--main {
     padding: 2rem;
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: .2rem;
 }
 
 .intro--sub {
     letter-spacing: .1rem;
     padding-bottom: .6rem;
+    font-size: 2rem;
+}
+
+.section__about-me {
+    & ul {
+        list-style: circle;
+        padding-left: 2rem;
+        // line-height: rem;
+        font-size:    1.5rem;
+        letter-spacing: .3rem;
+        color: white;
+    }
 }
