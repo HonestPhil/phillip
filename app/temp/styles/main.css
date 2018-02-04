@@ -142,7 +142,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #252525;
-  padding: 3rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -158,9 +157,8 @@ img {
 
 .section-title {
   position: relative;
-  color: white;
-  padding-left: 2rem;
-  padding-top: 3rem;
+  color: #252525;
+  padding: 2rem;
   font-size: 2.3rem;
 }
 
@@ -196,11 +194,49 @@ img {
 }
 
 .section__about-me ul {
-  list-style: circle;
-  padding-left: 2rem;
   font-size: 1.5rem;
-  letter-spacing: .3rem;
   color: white;
+}
+
+.slide__title {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+.slide__text {
+  color: #fff;
+  letter-spacing: .2rem;
+  font-weight: bold;
+}
+
+.slide__text__skills {
+  color: #fff;
+  letter-spacing: .2rem;
+  font-weight: lighter;
+}
+
+.slide__link {
+  text-decoration: none;
+}
+
+.slide__link:link, .slide__link:visited {
+  color: #fff;
+  /*background-color: gray;*/
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  -webkit-transform: all .2s;
+          transform: all .2s;
+}
+
+.slide__link:hover, .slide__link:active {
+  color: #fff;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(5deg) scale(1.3);
+          transform: rotate(5deg) scale(1.3);
+  background-color: transparent;
 }
 
 .u-center-text {
@@ -506,65 +542,47 @@ img {
   border-radius: 50em;
 }
 
-.slide__title {
-  position: absolute;
-  display: block;
-  color: white;
-  text-transform: uppercase;
-  top: 0;
-  padding: 1rem;
-  letter-spacing: .2rem;
-  /*margin-bottom: 0;*/
+.slider {
+  width: 50%;
+  margin: 8rem auto;
+  border-top: 1px solid #252525;
 }
 
-.slide__text {
-  position: absolute;
-  display: block;
-  top: 3rem;
-  padding: 1rem;
+.slick-prev:before,
+.slick-next:before {
   color: white;
-  letter-spacing: .2rem;
-  font-weight: bold;
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.slick-next {
+  right: -20rem;
+}
+
+.slick-prev {
+  left: -20rem;
+}
+
+.slide__description {
+  position: absolute;
+  padding: 2rem;
+  bottom: 0;
+  background: #333;
+  opacity: .8;
+  border-radius: 0 45px 0 0;
 }
 
 .slide__text__skills {
-  position: absolute;
-  display: block;
-  top: 6rem;
-  padding-left: 2rem;
-  list-style: none;
-  color: white;
-  letter-spacing: .2rem;
-  font-weight: lighter;
-  padding-bottom: .6rem;
-  border-bottom: 1px solid white;
+  margin-left: 2rem;
+}
+
+.slide__text__skills li {
+  list-style-type: circle;
+  color: #fff;
 }
 
 .slide__link {
-  position: absolute;
-  display: inline-block;
-  top: 13rem;
-  padding-left: 1rem;
-  text-decoration: none;
-}
-
-.slide__link:link, .slide__link:visited {
-  color: white;
-  /*background-color: gray;*/
-  text-decoration: none;
-  text-transform: uppercase;
-  display: inline-block;
-  -webkit-transform: all .2s;
-          transform: all .2s;
-}
-
-.slide__link:hover, .slide__link:active {
-  color: red;
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-  -webkit-transform: rotate(5deg) scale(1.3);
-          transform: rotate(5deg) scale(1.3);
-  background-color: transparent;
+  padding: 1rem;
 }
 
 .large-hero {
@@ -658,14 +676,33 @@ img {
   width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
 }
 
-.my-skills {
-  width: 50%;
-  margin: 0 auto;
+.about-me__story {
+  margin: 5rem 10rem;
+}
+
+.about-me__skills {
+  margin: 5rem 10rem;
+}
+
+.about-me__skills ul {
+  padding-left: 2rem;
+}
+
+.about-me__skills--list {
+  padding-right: 3rem;
+}
+
+.about-me__skills--list li {
+  display: inline-block;
+}
+
+.about-me__skills--list li:not(:last-child) {
+  padding-right: 2rem;
 }
 
 .footer {
-  background-color: transparent;
-  padding: 10rem 10rem;
+  position: relative;
+  background-color: #e5e5e5;
   font-size: 1.4rem;
   color: #777;
 }
@@ -674,6 +711,11 @@ img {
   .footer {
     padding: 8rem 0;
   }
+}
+
+.footer__info {
+  position: absolute;
+  top: 50%;
 }
 
 .footer__navigation {
@@ -739,5 +781,10 @@ img {
 }
 
 #about-me {
-  height: 95vh;
+  height: 50vh;
+}
+
+.section-heading {
+  background-color: #e5e5e5;
+  margin: 0;
 }

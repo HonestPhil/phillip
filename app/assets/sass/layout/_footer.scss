@@ -1,13 +1,21 @@
 .footer {
-    background-color: transparent;
-    padding: 10rem 10rem;
+    position: relative;
+    background-color: #e5e5e5;
+    // padding: 10rem 10rem;
     font-size: 1.4rem;
     color: $color-gray-dark;
+    // height: 50vh;
     
     
 
     @include respond(tab-port) {
         padding: 8rem 0;
+    }
+
+    &__info {
+        position: absolute;
+        top: 50%;
+
     }
 
     &__navigation {

@@ -1,4 +1,29 @@
-.my-skills {
-        width: 50%;
-        margin: 0 auto;
+.about-me {
+
+    &__story {
+        margin: 5rem 10rem;
     }
+
+    &__skills {
+
+        margin: 5rem 10rem;
+
+        & ul {
+            padding-left: 2rem;
+        }
+
+        &--list {
+            padding-right: 3rem;
+            & li {
+           
+                &:not(:last-child) {
+                    padding-right: 2rem;
+                }
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+

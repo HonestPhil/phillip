@@ -2,50 +2,14 @@
 <html>
 <head>
 	<title>Phillip Currence</title>
-	<link rel="stylesheet" type="text/css" href="./temp/styles/main.css">
+
 	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<!-- Add the slick-theme.css if you want default styling -->
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="./temp/styles/main.css">
 	 
-	<style type="text/css">
-		.slider {
-        width: 50%;
-        top: -5%;
-        margin: 100px auto;
-        height: 50%;
-        
-    }
-    .slick-slide {
-      margin: 0px 20px;
-    }
-    .slick-slide img {
-      width: 100%;
-    }
-    .slick-prev:before,
-    .slick-next:before {
-      color: white;
-      font-size: 4rem;
-      font-weight: 800;
-     
-    }
-    .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: .2;
-    }
-    
-    .slick-active {
-      opacity: .5;
-    }
-    .slick-current {
-      opacity: 1;
-    }
-    .slick-prev
-    {
-    left: -25px;
-    }
-    
-	</style>
+	
 	
 </head>
 <body>
@@ -66,62 +30,36 @@
 	    <li></li>
 	  </ul>
 	</div>
-	<!--<header class="header">-->
-		
-	<!--</header>-->
 		<section id="hero-area" class="section-header">
-			<!--<div class="general-content-container">-->
-				
-			<!--</div>-->
 			<div class="large-hero">
 				<div class="large-hero__text-content">
 					<h1 class="intro--main">Hello, my name is Phillip,</h1>
 					<h2 class="intro--sub">I am a web developer.</h2>
 					<h2 class="intro--sub">Thank you for visiting,</h2>
-					<h2 class="intro--sub">Here is some of my work...</h2>
-				</div>
-				<div class="scroll-button scroll-button--not-visable">
-				<a href="#showcase">
-					<span></span>See My Work?
-				</a>
-			</div>
-			</div>
-			<!--<div class="scroll-button scroll-button--not-visable">-->
-			<!--	<a href="#showcase">-->
-			<!--		<span></span>See My Work?-->
-			<!--	</a>-->
-			<!--</div>-->
-		</section>
-  
-  <h2 id="showcase" class="section-title">
-    This is my Portfolio...
-  </h2>
-  
-		<section class="lazy slider reveal-content" data-sizes="50vw" >
-		  
-		    <div class="slide">
-          <img data-lazy="./assets/images/yelpcamp-desktop.png" data-srcset="./assets/images/yelpcamp-desktop-hi-dpi.png" data-sizes="100vw">
-          <div class="slide__description">
-            <h3 class="slide__title">YelpCamp!</h3>
-            <p class="slide__text">
-              This project makes use of:
-              <ul class="slide__text__skills">
-                <li>Node</li>
-                <li>Express</li>
-                <li>RESTful Routes</li>
-                <li>User Authentication</li>
-                <li>Boostrap Styling</li>
-              </ul>
-            </p>
-            <a href="https://yelpcamp-live.herokuapp.com/" class="slide__link" target="blank">Live Demo</a>
-          </div>
+					<h2 class="intro--sub">Scroll down to see some of my work...</h2>
         </div>
         
-        <div>
-          <img data-lazy="./assets/images/natours-desktop-hi-dpi.png" data-srcset="./assets/images/natours-desktop-hi-dpi.png" data-sizes="100vw">
+				<div class="scroll-button scroll-button--not-visable">
+          <a href="#showcase">
+            <span></span>See My Work?
+          </a>
+        </div>
+			</div>
+    </section>
+  <div class="section-heading">
+    <h2 id="showcase" class="section-title">
+            This is my Portfolio...
+    </h2>
+  </div>
+  
+  
+		<section class="lazy slider reveal-content" data-sizes="50vw" >
+        
+        <div class="slide">
+          <img data-lazy="./assets/images/natours.jpg" >
           <div class="slide__description">
-            <h3 class="slide__title">Natours</h3>
-            <p class="slide__text">
+            <h3 class="slide__title tertiary-heading">Natours</h3>
+            <p class="slide__text paragraph">
               This project makes use of:
               <ul class="slide__text__skills">
                 <li>CSS3</li>
@@ -129,29 +67,49 @@
                 <li>Gulp</li>
                 <li>Sass</li>
                 <li>Node</li>
+                <li>JavaScript</li>
               </ul>
             </p>
             <a href="https://honestphil.github.io/natours/" class="slide__link" target="blank">Live Demo</a>
           </div>
         </div>
         
-        <div>
-          <img data-lazy="./assets/images/image3.png" data-srcset="./assets/images/image3.png" data-sizes="100vw">
+        <div class="slide">
+          <img src="./assets/images/travel.jpg" >
           <div class="slide__description">
-            <h3 class="slide__title">Project 1</h3>
-            <p class="slide__text">
+            <h3 class="slide__title tertiary-heading">Clear View Escapes</h3>
+            <p class="slide__text paragraph">
               This project makes use of:
               <ul class="slide__text__skills">
+                <li>CSS3</li>
+                <li>HTML5</li>
+                <li>Gulp</li>
+                <li>PostCss</li>
                 <li>Node</li>
-                <li>Express</li>
-                <li>RESTful Routes</li>
-                <li>User Authenrication</li>
-                <li>Boostrap Styling</li>
+                <li>JavaScript</li>
               </ul>
             </p>
             <a href="https://honestphil.github.io/travel-site/" class="slide__link" target="blank">Live Demo</a>
           </div>
-        </div>  
+        </div>
+        
+        <div class="slide">
+            <img src="./assets/images/yelpcamp.jpg">
+            <div class="slide__description">
+              <h3 class="slide__title tertiary-heading">YelpCamp!</h3>
+              <p class="slide__text paragraph">
+                This project makes use of:
+                <ul class="slide__text__skills">
+                  <li>Node</li>
+                  <li>Express</li>
+                  <li>RESTful Routes</li>
+                  <li>User Authentication</li>
+                  <li>Boostrap Styling</li>
+                </ul>
+              </p>
+              <a href="https://yelpcamp-live.herokuapp.com/" class="slide__link" target="blank">Live Demo</a>
+            </div>
+          </div>
 		  
     
     <!--<div>-->
@@ -163,23 +121,52 @@
     <!--  <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">-->
     <!--</div>-->
   </section>
-  <div id="scrollBtn">
+  <!-- <div id="scrollBtn">
 
       <div class="scroll-button scroll-button__about-me">
 				<a href="#about-me">
 					<span></span>About Me
 				</a>
 			</div>
-		</div>
+		</div> -->
     
   
   <section id="about-me" class="section__about-me">
-    <!--<div>-->
+    <div class="section-heading">
       <h2 class="section-title">
         Here's a little about me...
       </h2>
-    <!--</div>-->
-    <div class="general-content-container">
+    </div>
+    <div class="about-me__story">
+        <h3 class="tertiary-heading">
+            My Story
+          </h3>
+            <p class="paragraph">
+               My name is Phillip Currence. I have been involved in web development and marketing for over 10 years. I am a developer that can assist you and your team with website concept, website design, and website development. 
+
+             <p class="paragraph">
+               When you are bulding a web presence it is important to incorporate design factors that will push conversions and increase your bottom line. You should hire a web designer that understands how to bring your vision to life in the most functional and effective way possible. 
+             </p>
+            </p>
+    </div>
+    <div class="about-me__skills">
+        <h3 class="tertiary-heading">
+            My Skills
+          </h3>
+          <ul class="about-me__skills--list">
+            <li>NODE</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>SASS</li>
+            <li>GULP</li>
+            <li>GIT</li>
+            <li>BOOTSTRAP</li>
+            <li>WORDPRESS</li>
+            <li>JOOMLA</li>
+            <li>RESTful Routing</li>
+          </ul>
+    </div>
+    <!-- <div class="general-content-container">
       <div class="row u-margin-top-small">
           <div class="col-1-of-2">
             <h3 class="tertiary-heading">
@@ -212,10 +199,10 @@
                 </ul>  
             </div>
           </div>
-      </div>
+      </div> -->
       
-      <div class="footer">
-        <div class="row">
+      <!-- <div class="footer">
+        <div class="row footer__info">
           <div class="col-1-of-3">
               <div class="footer__navigation">
                   <ul class="footer__list">
@@ -242,39 +229,13 @@
               </p>
           </div>
         </div>
-      </div>
+      </div> -->
     
   </section>
   
-  <!--<footer class="footer">-->
-            
-  <!--          <div class="row">-->
-  <!--              <div class="col-1-of-2">-->
-  <!--                  <div class="footer__navigation">-->
-  <!--                      <ul class="footer__list">-->
-  <!--                          <li class="footer__item"><a href="#hero-area" class="footer__link">Home</a></li>-->
-  <!--                          <li class="footer__item"><a href="#showcase" class="footer__link">Portfolio</a></li>-->
-  <!--                          <li class="footer__item"><a href="#about-me" class="footer__link">About Me</a></li>-->
-  <!--                      </ul>-->
-  <!--                  </div>-->
-  <!--              </div>-->
-  <!--              <div id="toTop">-->
-  <!--                <div class="scroll-button ">-->
-  <!--                <a href="#hero-area">-->
-  <!--                  <span></span>Back to Top-->
-  <!--                </a>-->
-  <!--              </div>		-->
-  <!--            </div>-->
-  <!--              <div class="col-1-of-2">-->
-  <!--                  <p class="footer__copyright">-->
-  <!--                      Built by <a href="#" class="footer__link">Phillip Currence</a>-->
-  <!--                      <br>-->
-  <!--                      Designed by Phillip Currence-->
-  <!--                  </p>-->
-  <!--              </div>-->
-  <!--          </div>-->
-  <!--      </footer>-->
-      </div>
+  
+  
+     
   
   
 

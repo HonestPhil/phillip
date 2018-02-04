@@ -27,7 +27,7 @@ gulp.task('watch', function(){
 });
 
 gulp.task('cssInject', ['sass'], function(){
-	return gulp.src('./app/temp/styles/styles.scss')
+	return gulp.src('./app/temp/styles/main.css')
 		.pipe(browserSync.stream());
 });
 
