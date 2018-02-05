@@ -1,0 +1,53 @@
+.contact-me {
+    
+    display: none;
+    
+    & a {
+        
+    
+    position: fixed;
+    color: $color-grey-light-1;
+    background: $color-gray-dark-2;
+    display: inline-block;
+    right: 6rem;
+    top: 6rem;
+    border-radius: 50px;
+    font-size: 2rem;
+    height: 10rem;
+    width: 10rem;
+    text-align: center;
+    box-shadow: 3px 3px 3px #000;
+    cursor: pointer;
+    transition: top .2s;
+        
+        @include respond(tab-port){
+            top: 4rem;
+            right: 4rem;
+        }
+        
+        @include respond(phone){
+            top: 3rem;
+            right: 3rem;
+        }
+        
+        &:hover,
+        &:active {
+            top: 5.5rem;
+            
+            @include respond(tab-port){
+                top: 3rem;
+            }
+        
+            @include respond(phone){
+                top: 2rem;
+            }
+        }
+    }
+    
+    &__text {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        }
+    
+}

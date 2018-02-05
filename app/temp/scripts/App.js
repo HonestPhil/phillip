@@ -10349,7 +10349,7 @@ var introTypewriter = new __WEBPACK_IMPORTED_MODULE_0__modules_Typewriter__["a" 
   ],true,
   false,
   function() {
-                  __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.scroll-button').fadeIn('slow');
+                  __WEBPACK_IMPORTED_MODULE_1_jquery___default()(' .contact-me').fadeIn('slow');
                  }
   );
   
@@ -10383,7 +10383,6 @@ var introTypewriter = new __WEBPACK_IMPORTED_MODULE_0__modules_Typewriter__["a" 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_typeit__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_typeit___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_typeit__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ScrollButton__ = __webpack_require__(4);
 
 
@@ -10398,7 +10397,7 @@ class Intro {
     this.blink = cursor;
     this.nextTask = nextTask;
 
-    new __WEBPACK_IMPORTED_MODULE_1_typeit___default.a(this.typingArea, {
+    new __WEBPACK_IMPORTED_MODULE_1_typeit__["a" /* default */](this.typingArea, {
       strings: this.typingContent,
       lifeLike:true,
       autoStart: this.startTyping,
@@ -10414,229 +10413,82 @@ class Intro {
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 /*!
- * 
+ *
  *   typeit - The most versatile animated typing utility on the planet.
  *   Author: Alex MacArthur <alex@macarthur.me> (https://macarthur.me)
- *   Version: v5.0.1
+ *   Version: v5.2.0
  *   URL: https://typeitjs.com
  *   License: GPL-2.0
- * 
+ *
  */
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(true)
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["TypeIt"] = factory();
-	else
-		root["TypeIt"] = factory();
-})(this, function() {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+window.TypeItDefaults = {
+  strings: [],
+  speed: 100,
+  deleteSpeed: undefined,
+  lifeLike: true,
+  cursor: true,
+  cursorSpeed: 1000,
+  breakLines: true,
+  startDelay: 250,
+  startDelete: false,
+  nextStringDelay: 750,
+  loop: false,
+  loopDelay: 750,
+  html: true,
+  autoStart: true,
+  callback: function callback() {}
+};
 
-"use strict";
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+  return typeof obj;
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+};
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Instance = __webpack_require__(1).default;
 
-module.exports = function () {
-  function TypeIt(element, options) {
-    _classCallCheck(this, TypeIt);
 
-    this.elements = [];
-    this.instances = [];
 
-    if ((typeof element === "undefined" ? "undefined" : _typeof(element)) === "object") {
-      //-- There's only one!
-      if (element.length === undefined) {
-        this.elements.push(element);
-      } else {
-        //-- It's already an array!
-        this.elements = element;
-      }
+
+
+
+var classCallCheck = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+var createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
     }
-
-    //-- Convert to array of elements.
-    if (typeof element === "string") {
-      this.elements = document.querySelectorAll(element);
-    }
-
-    this.createInstances(options);
   }
 
-  _createClass(TypeIt, [{
-    key: "createInstances",
-    value: function createInstances(options) {
-      var _this = this;
-
-      [].slice.call(this.elements).forEach(function (element) {
-        _this.instances.push(new Instance(element, options));
-      });
-    }
-  }, {
-    key: "pushAction",
-    value: function pushAction(func) {
-      var argument = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-      this.instances.forEach(function (instance) {
-        instance.queue.push([instance[func], argument]);
-      });
-    }
-  }, {
-    key: "type",
-    value: function type(string) {
-      this.pushAction("type", string);
-      return this;
-    }
-  }, {
-    key: "delete",
-    value: function _delete(numCharacters) {
-      this.pushAction("delete", numCharacters);
-      return this;
-    }
-  }, {
-    key: "empty",
-    value: function empty() {
-      this.pushAction("empty");
-      return this;
-    }
-  }, {
-    key: "pause",
-    value: function pause(ms) {
-      this.pushAction("pause", ms);
-      return this;
-    }
-  }, {
-    key: "break",
-    value: function _break() {
-      this.pushAction("break");
-      return this;
-    }
-  }, {
-    key: "options",
-    value: function options(_options) {
-      this.pushAction("setOptions", _options);
-      return this;
-    }
-  }]);
-
-  return TypeIt;
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
 }();
 
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 var Instance = function () {
-  function Instance(element, options) {
-    _classCallCheck(this, Instance);
+  function Instance(element, id, options) {
+    classCallCheck(this, Instance);
 
-    this.defaults = {
-      strings: [],
-      speed: 100,
-      deleteSpeed: undefined,
-      lifeLike: true,
-      cursor: true,
-      cursorSpeed: 1000,
-      breakLines: true,
-      startDelay: 250,
-      startDelete: false,
-      nextStringDelay: 750,
-      loop: false,
-      loopDelay: 750,
-      html: true,
-      autoStart: true,
-      callback: function callback() {}
-    };
-
-    this.id = "";
+    this.timeouts = [];
+    this.id = id;
     this.queue = [];
     this.queueIndex = 0;
     this.hasStarted = false;
@@ -10645,16 +10497,17 @@ var Instance = function () {
     this.style = 'style="display:inline;position:relative;font:inherit;color:inherit;"';
     this.element = element;
 
-    this.setOptions(options, this.defaults, false);
+    this.setOptions(options, window.TypeItDefaults, false);
     this.init();
   }
 
-  _createClass(Instance, [{
+  createClass(Instance, [{
     key: "init",
     value: function init() {
       this.checkElement();
 
       this.options.strings = this.toArray(this.options.strings);
+      this.options.strings = this.removeComments(this.options.strings);
 
       //-- We don't have anything. Get out of here.
       if (this.options.strings.length >= 1 && this.options.strings[0] === "") {
@@ -10663,8 +10516,7 @@ var Instance = function () {
 
       this.element.innerHTML = '<i class="ti-placeholder" style="display:inline-block;width:0;line-height:0;overflow:hidden;">.</i><span ' + this.style + ' class="ti-container"></span>';
 
-      this.id = this.generateHash();
-      this.element.dataset["typeitid"] = this.id;
+      this.element.setAttribute("data-typeitid", this.id);
       this.elementContainer = this.element.querySelector("span");
 
       if (this.options.startDelete) {
@@ -10675,6 +10527,13 @@ var Instance = function () {
 
       this.generateQueue();
       this.kickoff();
+    }
+  }, {
+    key: "removeComments",
+    value: function removeComments(arrayOfStrings) {
+      return arrayOfStrings.map(function (string) {
+        return string.replace(/<\!--.*?-->/g, "");
+      });
     }
   }, {
     key: "generateQueue",
@@ -10751,20 +10610,15 @@ var Instance = function () {
       return true;
     }
   }, {
-    key: "generateHash",
-    value: function generateHash() {
-      return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-    }
-  }, {
     key: "cursor",
     value: function cursor() {
       if (!this.options.cursor) return;
 
-      var hash = this.generateHash();
-
       var styleBlock = document.createElement("style");
 
-      var styles = "\n          @keyframes blink-" + hash + " {\n            0% {opacity: 0}\n            49%{opacity: 0}\n            50% {opacity: 1}\n          }\n\n          [data-typeitid='" + this.id + "'] .ti-cursor {\n            animation: blink-" + hash + " " + this.options.cursorSpeed / 1000 + "s infinite;\n          }\n        ";
+      styleBlock.id = this.id;
+
+      var styles = "\n          @keyframes blink-" + this.id + " {\n            0% {opacity: 0}\n            49%{opacity: 0}\n            50% {opacity: 1}\n          }\n\n          [data-typeitid='" + this.id + "'] .ti-cursor {\n            animation: blink-" + this.id + " " + this.options.cursorSpeed / 1000 + "s infinite;\n          }\n        ";
 
       styleBlock.appendChild(document.createTextNode(styles));
 
@@ -10787,6 +10641,9 @@ var Instance = function () {
       } else {
         this.elementContainer.insertAdjacentHTML("beforeend", content);
       }
+
+      //-- Split & rejoin to avoid odd spacing issues in some browsers.
+      this.elementContainer.innerHTML = this.elementContainer.innerHTML.split("").join("");
     }
 
     /**
@@ -10797,7 +10654,7 @@ var Instance = function () {
 
   }, {
     key: "toArray",
-    value: function toArray(string) {
+    value: function toArray$$1(string) {
       return string.constructor === Array ? string.slice(0) : string.split("<br>");
     }
 
@@ -10908,7 +10765,7 @@ var Instance = function () {
         string = string[0];
       }
 
-      this.typingTimeout = setTimeout(function () {
+      this.timeouts[0] = setTimeout(function () {
         //-- Randomize the timeout each time, if that's your thing.
         _this4.setPace(_this4);
 
@@ -10964,17 +10821,17 @@ var Instance = function () {
   }, {
     key: "setOptions",
     value: function setOptions(settings) {
-      var defaults = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      var defaults$$1 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
       var autoExecuteQueue = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
       var mergedSettings = {};
 
-      if (defaults === null) {
-        defaults = this.options;
+      if (defaults$$1 === null) {
+        defaults$$1 = this.options;
       }
 
-      for (var attrname in defaults) {
-        mergedSettings[attrname] = defaults[attrname];
+      for (var attrname in defaults$$1) {
+        mergedSettings[attrname] = defaults$$1[attrname];
       }
 
       for (var _attrname in settings) {
@@ -11010,7 +10867,7 @@ var Instance = function () {
 
       var chars = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
-      this.deleteTimeout = setTimeout(function () {
+      this.timeouts[1] = setTimeout(function () {
         _this6.setPace();
 
         var textArray = _this6.elementContainer.innerHTML.split("");
@@ -11117,15 +10974,118 @@ var Instance = function () {
       }
     }
   }]);
-
   return Instance;
 }();
 
-exports.default = Instance;
+var TypeIt = function () {
+  function TypeIt(element, args) {
+    classCallCheck(this, TypeIt);
 
-/***/ })
-/******/ ]);
-});
+    this.id = this.generateHash();
+    this.instances = [];
+    this.elements = [];
+    this.args = args;
+
+    if ((typeof element === "undefined" ? "undefined" : _typeof(element)) === "object") {
+      //-- There's only one!
+      if (element.length === undefined) {
+        this.elements.push(element);
+      } else {
+        //-- It's already an array!
+        this.elements = element;
+      }
+    }
+
+    //-- Convert to array of elements.
+    if (typeof element === "string") {
+      this.elements = document.querySelectorAll(element);
+    }
+
+    this.createInstances();
+  }
+
+  createClass(TypeIt, [{
+    key: "generateHash",
+    value: function generateHash() {
+      return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    }
+  }, {
+    key: "createInstances",
+    value: function createInstances() {
+      var _this = this;
+
+      [].slice.call(this.elements).forEach(function (element) {
+        _this.instances.push(new Instance(element, _this.id, _this.args));
+      });
+    }
+  }, {
+    key: "pushAction",
+    value: function pushAction(func) {
+      var argument = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+      this.instances.forEach(function (instance) {
+        instance.queue.push([instance[func], argument]);
+      });
+    }
+  }, {
+    key: "type",
+    value: function type(string) {
+      this.pushAction("type", string);
+      return this;
+    }
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      var removeCursor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+
+      this.instances.forEach(function (instance) {
+        instance.timeouts.forEach(function (timeout) {
+          clearTimeout(timeout);
+        });
+
+        if (removeCursor) {
+          instance.element.removeChild(instance.element.querySelector(".ti-cursor"));
+        }
+      });
+
+      this.instances = [];
+    }
+  }, {
+    key: "delete",
+    value: function _delete(numCharacters) {
+      this.pushAction("delete", numCharacters);
+      return this;
+    }
+  }, {
+    key: "empty",
+    value: function empty() {
+      this.pushAction("empty");
+      return this;
+    }
+  }, {
+    key: "pause",
+    value: function pause(ms) {
+      this.pushAction("pause", ms);
+      return this;
+    }
+  }, {
+    key: "break",
+    value: function _break() {
+      this.pushAction("break");
+      return this;
+    }
+  }, {
+    key: "options",
+    value: function options(_options) {
+      this.pushAction("setOptions", _options);
+      return this;
+    }
+  }]);
+  return TypeIt;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (TypeIt);
+
 
 /***/ }),
 /* 4 */

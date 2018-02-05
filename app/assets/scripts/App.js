@@ -15,7 +15,7 @@ var introTypewriter = new Intro(heroArea,
   ],true,
   false,
   function() {
-                  $('.scroll-button').fadeIn('slow');
+                  $(' .contact-me').fadeIn('slow');
                  }
   );
   

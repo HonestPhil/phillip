@@ -155,6 +155,10 @@ img {
   height: auto;
 }
 
+a {
+  color: #333;
+}
+
 .section-title {
   position: relative;
   color: #252525;
@@ -583,6 +587,66 @@ img {
 
 .slide__link {
   padding: 1rem;
+}
+
+.contact-me {
+  display: none;
+}
+
+.contact-me a {
+  position: fixed;
+  color: #f7f7f7;
+  background: #999;
+  display: inline-block;
+  right: 6rem;
+  top: 6rem;
+  border-radius: 50px;
+  font-size: 2rem;
+  height: 10rem;
+  width: 10rem;
+  text-align: center;
+  -webkit-box-shadow: 3px 3px 3px #000;
+          box-shadow: 3px 3px 3px #000;
+  cursor: pointer;
+  -webkit-transition: top .2s;
+  transition: top .2s;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .contact-me a {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .contact-me a {
+    top: 3rem;
+    right: 3rem;
+  }
+}
+
+.contact-me a:hover, .contact-me a:active {
+  top: 5.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .contact-me a:hover, .contact-me a:active {
+    top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .contact-me a:hover, .contact-me a:active {
+    top: 2rem;
+  }
+}
+
+.contact-me__text {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .large-hero {
