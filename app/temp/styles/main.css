@@ -163,7 +163,7 @@ a {
   position: relative;
   color: #252525;
   padding: 2rem;
-  font-size: 2.3rem;
+  font-size: 3.5rem;
 }
 
 .paragraph {
@@ -171,7 +171,7 @@ a {
   color: white;
   letter-spacing: .2rem;
   padding-left: 2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .paragraph:not(:last-child) {
@@ -187,7 +187,7 @@ a {
 
 .intro--main {
   padding: 2rem;
-  font-size: 3rem;
+  font-size: 6rem;
   letter-spacing: .2rem;
 }
 
@@ -591,16 +591,12 @@ a {
 
 .contact-me {
   display: none;
-}
-
-.contact-me a {
   position: fixed;
-  color: #f7f7f7;
   background: #999;
-  display: inline-block;
+  display: block;
   right: 6rem;
   top: 6rem;
-  border-radius: 50px;
+  border-radius: 50%;
   font-size: 2rem;
   height: 10rem;
   width: 10rem;
@@ -613,17 +609,24 @@ a {
 }
 
 @media only screen and (max-width: 56.25em) {
-  .contact-me a {
+  .contact-me {
     top: 4rem;
     right: 4rem;
+    font-size: 4rem;
+    height: 30rem;
+    width: 30rem;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
-  .contact-me a {
+  .contact-me {
     top: 3rem;
     right: 3rem;
   }
+}
+
+.contact-me a {
+  color: #f7f7f7;
 }
 
 .contact-me a:hover, .contact-me a:active {
@@ -647,6 +650,23 @@ a {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .contact-me__link {
+    top: 4rem;
+    right: 4rem;
+    font-size: 4rem;
+    height: 30rem;
+    width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .contact-me__link {
+    top: 3rem;
+    right: 3rem;
+  }
 }
 
 .large-hero {

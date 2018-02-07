@@ -1,17 +1,12 @@
 .contact-me {
     
     display: none;
-    
-    & a {
-        
-    
     position: fixed;
-    color: $color-grey-light-1;
     background: $color-gray-dark-2;
-    display: inline-block;
+    display: block;
     right: 6rem;
     top: 6rem;
-    border-radius: 50px;
+    border-radius: 50%;
     font-size: 2rem;
     height: 10rem;
     width: 10rem;
@@ -19,16 +14,23 @@
     box-shadow: 3px 3px 3px #000;
     cursor: pointer;
     transition: top .2s;
+
+    @include respond(tab-port){
+        top: 4rem;
+        right: 4rem;
+        font-size: 4rem;
+        height: 30rem;
+        width: 30rem; 
+    }
+    
+    @include respond(phone){
+        top: 3rem;
+        right: 3rem;
+    }
+    
+    & a {
         
-        @include respond(tab-port){
-            top: 4rem;
-            right: 4rem;
-        }
-        
-        @include respond(phone){
-            top: 3rem;
-            right: 3rem;
-        }
+        color: $color-grey-light-1;
         
         &:hover,
         &:active {
@@ -49,5 +51,20 @@
         top: 50%;
         transform: translate(-50%,-50%);
         }
+
+    &__link {
+        @include respond(tab-port){
+            top: 4rem;
+            right: 4rem;
+            font-size: 4rem;
+            height: 30rem;
+            width: 30rem; 
+        }
+        
+        @include respond(phone){
+            top: 3rem;
+            right: 3rem;
+        }
+    }
     
 }
