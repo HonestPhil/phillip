@@ -612,9 +612,9 @@ a {
   .contact-me {
     top: 4rem;
     right: 4rem;
-    font-size: 4rem;
-    height: 30rem;
-    width: 30rem;
+    font-size: 2rem;
+    height: 10rem;
+    width: 10rem;
   }
 }
 
@@ -656,7 +656,7 @@ a {
   .contact-me__link {
     top: 4rem;
     right: 4rem;
-    font-size: 4rem;
+    font-size: 2rem;
     height: 30rem;
     width: 30rem;
   }
