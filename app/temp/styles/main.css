@@ -794,6 +794,30 @@ a {
   padding-right: 2rem;
 }
 
+.about-me__hire-me {
+  padding: 1rem;
+}
+
+.about-me__hire-me:link, .about-me__hire-me:visited {
+  color: #fff;
+  /*background-color: gray;*/
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  border-style: outset;
+  -webkit-transform: all .2s;
+          transform: all .2s;
+}
+
+.about-me__hire-me:hover, .about-me__hire-me:active {
+  color: #fff;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1.3, 1.5);
+          transform: scale(1.3, 1.5);
+  background-color: transparent;
+}
+
 .footer {
   position: relative;
   background-color: #e5e5e5;
