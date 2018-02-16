@@ -2,11 +2,20 @@
 
     &__story {
         margin: 5rem 10rem;
+        
+        @include respond(phone){
+            margin: 5rem 1rem;
+        }
     }
 
     &__skills {
 
         margin: 5rem 10rem;
+        
+        @include respond(phone){
+            margin: 5rem 1rem;
+        }
+        
 
         & ul {
             padding-left: 2rem;
@@ -20,6 +29,11 @@
                     padding-right: 2rem;
                 }
                 display: inline-block;
+                
+                // @include respond(phone) {
+                //     list-style-type: disc;
+                //     display: block;
+                // }
             }
         }
     }

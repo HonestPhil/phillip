@@ -28,11 +28,19 @@
 // }
 .slick-next
 {
-right: -20rem;
+right: -15rem;
+
+    @include respond(phone) {
+        right: -5rem;
+    }
 }
 .slick-prev
 {
-left: -20rem;
+    left: -15rem;
+        
+        @include respond(phone) {
+            left: -7rem;
+        }
 }
 
 .slide__description {
@@ -42,6 +50,16 @@ left: -20rem;
     background: $color-gray-dark-3;
     opacity: .8;
     border-radius: 0 45px 0 0;
+    
+    
+    @include respond(phone){
+        padding: 0;
+        border-radius: 0 45px 0 0;
+        width: auto;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        opacity: .6;
+    }
 }
 
 .slide {
@@ -52,15 +70,17 @@ left: -20rem;
     
     &__text {
         
-        
-        
         &__skills {
             margin-left: 2rem;
+            
+            
         
            & li {
             //    display: inline-block;
                list-style-type: circle;
                color: $color-white;
+               
+               
            } 
         }
     }

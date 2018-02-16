@@ -1,13 +1,48 @@
 a {
     color: $color-gray-dark-3;
 }
+
+.intro--main {
+    
+    padding: 2rem;
+    font-size: 5rem;
+    letter-spacing: .2rem;
+    
+}
+
+.intro--sub {
+    letter-spacing: .1rem;
+    padding-bottom: .6rem;
+    font-size: 3.5rem;
+   
+    @include respond(phone) {
+       font-size: 2.5rem;
+   } 
+   
+}
+
 .section-title {
     position: relative;
     color: $primaryColor;
     padding: 2rem;
     // padding-left: 2rem;
     // padding-top: 3rem;
-    font-size: 3.5rem;
+    font-size: 3rem;
+    
+    
+}
+
+
+
+.tertiary-heading {
+    color: white;
+    letter-spacing: .2rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    
+    
+    
+    
 }
 
 .paragraph {
@@ -15,37 +50,20 @@ a {
     color: white;
     letter-spacing: .2rem;
     padding-left: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    
+    
     
     &:not(:last-child){
         margin-bottom: 3rem;
     }
 }
 
-.tertiary-heading {
-    color: white;
-    letter-spacing: .2rem;
-    padding-bottom: 1rem;
-    font-size: 1.75rem;
-}
-
-.intro--main {
-    padding: 2rem;
-    font-size: 6rem;
-    letter-spacing: .2rem;
-}
-
-.intro--sub {
-    letter-spacing: .1rem;
-    padding-bottom: .6rem;
-    font-size: 2rem;
-}
 
 .section__about-me {
     & ul {
         font-size:    1.5rem;
         color: white;
-        // display: inline-block;
     }
 }
 
@@ -56,18 +74,34 @@ a {
         color: $color-white;
         text-transform: uppercase;
         letter-spacing: .2rem;
+        
+        @include respond(phone){
+            display: none;            
+        }
     }
     
     &__text {
-        color: $color-white;
+        font-size: $default-font-size;
+        color: white;
         letter-spacing: .2rem;
+        padding-left: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
+        margin-bottom: 1rem;
+        
+         @include respond(phone){
+            display: none;            
+        }
         
         
         &__skills {
             color: $color-white;
             letter-spacing: .2rem;
             font-weight: lighter;
+            
+            // & li {
+            //     display: inline-block;
+            // }
         }
     }
     

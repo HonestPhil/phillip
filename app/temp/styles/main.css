@@ -159,11 +159,36 @@ a {
   color: #333;
 }
 
+.intro--main {
+  padding: 2rem;
+  font-size: 5rem;
+  letter-spacing: .2rem;
+}
+
+.intro--sub {
+  letter-spacing: .1rem;
+  padding-bottom: .6rem;
+  font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .intro--sub {
+    font-size: 2.5rem;
+  }
+}
+
 .section-title {
   position: relative;
   color: #252525;
   padding: 2rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
+}
+
+.tertiary-heading {
+  color: white;
+  letter-spacing: .2rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
 }
 
 .paragraph {
@@ -171,30 +196,11 @@ a {
   color: white;
   letter-spacing: .2rem;
   padding-left: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .paragraph:not(:last-child) {
   margin-bottom: 3rem;
-}
-
-.tertiary-heading {
-  color: white;
-  letter-spacing: .2rem;
-  padding-bottom: 1rem;
-  font-size: 1.75rem;
-}
-
-.intro--main {
-  padding: 2rem;
-  font-size: 6rem;
-  letter-spacing: .2rem;
-}
-
-.intro--sub {
-  letter-spacing: .1rem;
-  padding-bottom: .6rem;
-  font-size: 2rem;
 }
 
 .section__about-me ul {
@@ -208,10 +214,26 @@ a {
   letter-spacing: .2rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .slide__title {
+    display: none;
+  }
+}
+
 .slide__text {
-  color: #fff;
+  font-size: 1.6rem;
+  color: white;
   letter-spacing: .2rem;
+  padding-left: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .slide__text {
+    display: none;
+  }
 }
 
 .slide__text__skills {
@@ -560,11 +582,23 @@ a {
 }
 
 .slick-next {
-  right: -20rem;
+  right: -15rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .slick-next {
+    right: -5rem;
+  }
 }
 
 .slick-prev {
-  left: -20rem;
+  left: -15rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .slick-prev {
+    left: -7rem;
+  }
 }
 
 .slide__description {
@@ -574,6 +608,17 @@ a {
   background: #333;
   opacity: .8;
   border-radius: 0 45px 0 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .slide__description {
+    padding: 0;
+    border-radius: 0 45px 0 0;
+    width: auto;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    opacity: .6;
+  }
 }
 
 .slide__text__skills {
@@ -594,35 +639,18 @@ a {
   position: fixed;
   background: #999;
   display: block;
-  right: 6rem;
-  top: 6rem;
+  right: 4rem;
+  top: 4rem;
   border-radius: 50%;
-  font-size: 2rem;
-  height: 10rem;
-  width: 10rem;
   text-align: center;
   -webkit-box-shadow: 3px 3px 3px #000;
           box-shadow: 3px 3px 3px #000;
   cursor: pointer;
   -webkit-transition: top .2s;
   transition: top .2s;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .contact-me {
-    top: 4rem;
-    right: 4rem;
-    font-size: 2rem;
-    height: 10rem;
-    width: 10rem;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .contact-me {
-    top: 3rem;
-    right: 3rem;
-  }
+  font-size: 1.5rem;
+  height: 7rem;
+  width: 7rem;
 }
 
 .contact-me a {
@@ -633,18 +661,6 @@ a {
   top: 5.5rem;
 }
 
-@media only screen and (max-width: 56.25em) {
-  .contact-me a:hover, .contact-me a:active {
-    top: 3rem;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .contact-me a:hover, .contact-me a:active {
-    top: 2rem;
-  }
-}
-
 .contact-me__text {
   position: absolute;
   top: 50%;
@@ -652,28 +668,12 @@ a {
           transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 56.25em) {
-  .contact-me__link {
-    top: 4rem;
-    right: 4rem;
-    font-size: 2rem;
-    height: 30rem;
-    width: 30rem;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .contact-me__link {
-    top: 3rem;
-    right: 3rem;
-  }
-}
-
 .large-hero {
   position: relative;
   color: white;
   height: 100vh;
-  width: 100%;
+  width: 80%;
+  margin: auto;
 }
 
 .large-hero__text-content {
@@ -764,8 +764,20 @@ a {
   margin: 5rem 10rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .about-me__story {
+    margin: 5rem 1rem;
+  }
+}
+
 .about-me__skills {
   margin: 5rem 10rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .about-me__skills {
+    margin: 5rem 1rem;
+  }
 }
 
 .about-me__skills ul {
