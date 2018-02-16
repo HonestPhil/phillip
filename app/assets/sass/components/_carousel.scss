@@ -36,7 +36,7 @@ right: -15rem;
 }
 .slick-prev
 {
-    left: -15rem;
+    left: -20rem;
         
         @include respond(phone) {
             left: -7rem;
@@ -87,7 +87,8 @@ right: -15rem;
     
     &__link {
        
-        padding: 1rem;
+        padding: .3rem;
+        margin-top: 1rem;
         
         &:link,
         &:visited {

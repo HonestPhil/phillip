@@ -13,9 +13,10 @@ class Intro {
 
     new TypeIt(this.typingArea, {
       strings: this.typingContent,
+      options: ({speed: 250}),
       lifeLike:true,
       autoStart: this.startTyping,
-      nextStringDelay: 750,
+      nextStringDelay: 300,
       cursor: this.blink,
       callback: this.nextTask
     });

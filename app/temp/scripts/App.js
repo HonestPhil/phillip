@@ -10338,7 +10338,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var heroArea = __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.large-hero__text-content');
 var heroText = __WEBPACK_IMPORTED_MODULE_1_jquery___default()('large-hero__text-content').text();
-var loadContent = __WEBPACK_IMPORTED_MODULE_1_jquery___default()()
+// var loadContent = $()
 
 var introTypewriter = new __WEBPACK_IMPORTED_MODULE_0__modules_Typewriter__["a" /* default */](heroArea,
   [
@@ -10349,8 +10349,8 @@ var introTypewriter = new __WEBPACK_IMPORTED_MODULE_0__modules_Typewriter__["a" 
   ],true,
   false,
   function() {
-                  __WEBPACK_IMPORTED_MODULE_1_jquery___default()(' .contact-me').fadeIn('slow');
-                 }
+              __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.contact-me').fadeIn('slow');
+              }
   );
   
   
@@ -10399,9 +10399,10 @@ class Intro {
 
     new __WEBPACK_IMPORTED_MODULE_1_typeit__["a" /* default */](this.typingArea, {
       strings: this.typingContent,
+      options: ({speed: 250}),
       lifeLike:true,
       autoStart: this.startTyping,
-      nextStringDelay: 750,
+      nextStringDelay: 300,
       cursor: this.blink,
       callback: this.nextTask
     });

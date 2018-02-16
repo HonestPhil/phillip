@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 var heroArea = $('.large-hero__text-content');
 var heroText = $('large-hero__text-content').text();
-var loadContent = $()
+// var loadContent = $()
 
 var introTypewriter = new Intro(heroArea,
   [
@@ -15,8 +15,8 @@ var introTypewriter = new Intro(heroArea,
   ],true,
   false,
   function() {
-                  $(' .contact-me').fadeIn('slow');
-                 }
+              $('.contact-me').fadeIn('slow');
+              }
   );
   
   
