@@ -9,7 +9,7 @@
 	<!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
   
-  <link rel="stylesheet" href="assets/styles/styles-c8841396d7.css"/>
+  <link rel="stylesheet" href="assets/styles/styles-a0d01d91f2.css"/>
   
 </head>
 <body>
@@ -36,7 +36,6 @@
 				<div class="large-hero__text-content">
 					<h1 class="intro--main">Hello, my name is Phillip,</h1>
 					<h2 class="intro--sub">I designed and coded this website.</h2>
-					<h2 class="intro--sub">Thank you for visiting,</h2>
 					<h2 class="intro--sub">Scroll down to see some of my work...</h2>
         </div>
         
@@ -58,7 +57,10 @@
 		<section class="lazy slider reveal-content" data-sizes="50vw" >
         
         <div class="slide">
-          <img data-lazy="./assets/images/natours.jpg" >
+          <img srcset="./assets/images/natours-640.jpg,
+          ./assets/images/natours-1280.jpg 1.5x,
+          ./assets/images/natours.jpg 2x"
+                    src="./assets/images/natours.jpg" alt="Natours website preview">
           <div class="slide__description">
             <h3 class="slide__title tertiary-heading">Natours</h3>
             <p class="slide__text">
@@ -77,7 +79,10 @@
         </div>
         
         <div class="slide">
-          <img src="./assets/images/travel.jpg" >
+          <img srcset="./assets/images/travel-640.jpg,
+          ./assets/images/travel-1280.jpg 1.5x,
+          ./assets/images/travel.jpg 2x"
+                    src="./assets/images/travel.jpg" alt="Travel website preview">
           <div class="slide__description">
             <h3 class="slide__title tertiary-heading">Clear View Escapes</h3>
             <p class="slide__text">
@@ -97,6 +102,10 @@
         
         <div class="slide">
             <img src="./assets/images/yelpcamp.jpg">
+            <img srcset="./assets/images/yelpcamp-640.jpg,
+            ./assets/images/yelpcamp-1280.jpg 1.5x,
+            ./assets/images/yelpcamp.jpg 2x"
+                    src="./assets/images/yelpcamp.jpg" alt="YelpCamp website preview">
             <div class="slide__description">
               <h3 class="slide__title tertiary-heading">YelpCamp!</h3>
               <p class="slide__text">
@@ -238,9 +247,15 @@
           </div>
         </div>
       </div> -->
-    
+      <div class="section-heading">
+        <h2 class="section-title">
+          Thank you for visiting!
+        </h2>
+      </div>
   </section>
+
   
+
   <div  class="contact-me">
     <div class="contact-me__button">
         <a href="https://podio.com/webforms/20328677/1387480" target="_blank" class="contact-me__link">
@@ -259,9 +274,9 @@
 
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 
- <script src="assets/scripts/App-0a76deb45e.js"></script>
+ <script src="assets/scripts/App-6416f91bdb.js"></script>
 
- <script src="assets/scripts/slick-ef23a5afac.js"></script>
+ <script src="assets/scripts/slick-378ff06a19.js"></script>
 
   <script type="text/javascript">
     $(document).on('ready', function() {
