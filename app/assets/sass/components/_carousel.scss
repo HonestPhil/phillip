@@ -28,10 +28,10 @@
 // }
 .slick-next
 {
-right: -15rem;
+right: -20rem;
 
     @include respond(phone) {
-        right: -5rem;
+        right: -8rem;
     }
 }
 .slick-prev
@@ -39,8 +39,14 @@ right: -15rem;
     left: -20rem;
         
         @include respond(phone) {
-            left: -7rem;
+            left: -8rem;
         }
+}
+
+.slick-prev, .slick-next {
+    overflow: visible;
+    height: 8rem;
+    width: 8rem;
 }
 
 .slide__description {
