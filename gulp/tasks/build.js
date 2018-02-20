@@ -37,6 +37,11 @@ gulp.task('usemin', ['deleteDocsFolder'], function(){
             js: [function() {return rev()}]
         }))
         .pipe(gulp.dest("./docs"));
-})
+});
 
-gulp.task('build', ['deleteDocsFolder', 'optimizeImages', 'usemin']);
+gulp.task('cname', ['deleteDocsFolder'], function(){
+    return gulp.src('./CNAME')
+        .pipe(gulp.dest("./docs/"));
+});
+
+gulp.task('build', ['deleteDocsFolder', 'optimizeImages', 'usemin', 'cname']);
